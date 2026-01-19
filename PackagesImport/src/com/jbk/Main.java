@@ -1,0 +1,13 @@
+package com.jbk;
+
+import com.tka.Demo;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Demo d = new Demo();
+
+	}
+
+}
