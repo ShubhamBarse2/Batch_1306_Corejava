@@ -1,0 +1,14 @@
+package com.tka;
+
+public class Aa {
+
+	public static void main(String[] args) {
+
+		A a = new A();
+		System.out.println(a.myAddition());  
+		System.out.println(a.myFullName());
+		System.out.println(a.checkSpecialSymbol());
+
+	}
+
+}
