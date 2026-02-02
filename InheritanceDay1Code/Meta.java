@@ -1,0 +1,16 @@
+package InheritanceDay1Code;
+
+public class Meta {
+
+	public void myRegister() {
+		System.out.println("register here ... ! ");
+	}
+
+	public void myLogin() {
+		System.out.println("Login here ..!");
+	}
+
+	public void myLogout() {
+		System.out.println("Logout successfully... ! ");
+	}
+}

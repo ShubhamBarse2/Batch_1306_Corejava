@@ -1,0 +1,13 @@
+package InheritanceDay1Code;
+
+public class Instagram extends Meta {
+
+	public void addStroy() {
+		System.out.println("Add UR Instagram Sotry ... !");
+	}
+
+	public void uploadReels() {
+		System.out.println("upload reels on Instagram... ! ");
+	}
+
+}
