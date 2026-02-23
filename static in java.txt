@@ -1,0 +1,27 @@
+Todays Lecture Agenda : 
+
+static keyword in java : 
+
+1. static is an keyword in java ,it is used to save memory ,it will goes into memory only once and always give latest value 
+2. it used for better memory management purpose 
+3. it is belongs to class level
+suppose if u want to access static members then we have two options :
+also if we make the variables , class(Inner) , methods as static so no need to create an object of this class (by using Dot(.) Operator)
+
+1.by using Object Creation 
+2.by using class/interface name 
+
+
+
+
+we can apply static keyword on : 
+
+1.Instance variables / Global variables 
+2.methods 
+3.block 
+4.class(Inner class)
+
+
+
+
+
