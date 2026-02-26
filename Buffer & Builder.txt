@@ -1,0 +1,150 @@
+Last Lecture Agenda : 
+
+String(Immutable) -> (cannot be changed) () :  
+
+startsWith()
+endsWith()
+replace()
+replaceAll
+equals 
+chatAt
+toLowerCase
+toUpperCase
+tocharArray 
+concat
+trim
+hashcode 
+split 
+length 
+intern
+
+
+
+
+String name = "Ram";
+
+String name2 = name.concat(" Yadav");
+
+syso(name);
+ 
+
+
+
+Todays Lecture Agenda : 
+
+StringBuilder & StringBuffer -> (Mutable(can be changed)) : 
+
+this both are the inbuild classes which is provided by java present in java.lang package 
+this both follows the Mutable(can be changed) concept 
+StringBuilder & StringBuffer contains same methods such as reverse , append etc
+
+by using Builder & Buffer we can modify existing String 
+supposed if u want to used this both classes we need to create an Object.
+
+ex : 
+
+StringBuilder sb = new StringBuilder();
+StringBuffer sb = new StringBuffer();
+
+
+
+
+ref code : 
+
+
+
+package com.tka;
+
+public class B {
+
+	public static void main(String[] args) {
+
+//		String s = "Ram";
+//		String s1 = s.concat(" Yadav");
+//
+//		System.out.println(s.hashCode());
+//		System.out.println(s1.hashCode());
+
+//		StringBuilder sb = new StringBuilder("Ram");
+//		sb.append(" Yadav");
+//
+//		System.out.println(sb);
+
+		StringBuffer sb1 = new StringBuffer("Ram");
+		sb1.append(" Yadav");
+////
+////		System.out.println(sb1);
+////		System.out.println(sb1.reverse());
+//
+		String name = "Shubham";
+		StringBuilder sb = new StringBuilder(name);
+		sb.append(" Patil");
+////
+////		System.out.println(sb);
+
+	}
+
+}
+
+
+IMP Diff : 
+
+
+String                          Builder & Buffer 
+
+Immutable                       Mutable 
+
+Literal                         with new keyword
+with new Keyword 
+
+methods                         method 
+(concat)                        (append)
+
+cant modify                     can be modify 
+existing string 
+
+
+
+
+concat                         append 
+
+String class method         Builder & 	Buffer class method
+
+Return type String          return type SBu & SBf
+
+generate new String         modify existing string 
+
+
+
+
+
+
+
+Builder                                Buffer
+
+methods                            All methods synchronized 
+not synchronized
+
+faster                             slower 
+
+Execution(together)               Execution(One by one)
+
+
+
+
+note : 
+
+
+synchronized  :  one by one
+
+non - synchronized : together 
+
+
+
+
+
+
+
+
+
+
