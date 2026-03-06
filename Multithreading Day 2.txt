@@ -1,0 +1,28 @@
+Day 2 Multithreading : 
+
+Thread Class
+
+Thread is a class present in the java.lang package.
+To create a thread, we extend the Thread class.
+We must override the run() method.
+The thread starts when we call the start() method.
+
+
+Runnable Interface 
+
+Runnable is an interface in java.lang.
+We implement Runnable interface.
+We override the run() method.
+Then we pass the object to a Thread object.
+
+
+
+Feature	                              wait()                    	 sleep()
+
+Package/Class	             Method of Object class                     Method of Thread class
+Purpose	                     Used for inter-thread communication	Used to pause a thread for specific time
+Lock Release                 Releases the lock	                        Does not release the lock
+Synchronization	             Must be used inside synchronized         	Can be used anywhere
+Wake Up	By                   notify() or notifyAll()	                Automatically after time completes
+
+
