@@ -1,0 +1,46 @@
+Todays Lecture Agenda :
+
+Collection Framework :
+
+it is an Collection of Inbuild classes & Interfaces
+it provides an built-in methods to performed specific operation
+whole classes & Interfaces are present in java.util package 
+
+
+ref Code : 
+
+
+package com.tka;
+
+import java.util.ArrayList;
+
+public class Demo {
+
+	public static void main(String[] args) {
+ 
+		ArrayList list = new ArrayList();
+		list.add("shubham");
+		list.add(123);
+		list.add(true);
+		list.add(23456789456l);
+		list.add(67.67);
+		list.add('@');
+
+//		list.clear();
+//		System.out.println(list.contains("rahul"));
+
+//		list.remove(1);
+
+		
+		
+		System.out.println(list.get(1));
+//		System.out.println(list);
+
+	}
+
+}
+ 
+
+ 
+
+ 
