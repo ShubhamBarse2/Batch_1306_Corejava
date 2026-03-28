@@ -1,0 +1,111 @@
+1. Garbage Collection (GC)
+Garbage Collection in Java is the process of automatically deleting unused objects from memory to free space.
+ Why Required?
+Java uses heap memory to store objects
+If unused objects are not removed → memory leak
+GC helps in automatic memory management
+Key Concepts
+Object becomes eligible when:
+Reference is set to null
+Reference variable is reassigned
+Object created inside method (goes out of scope)
+JVM automatically runs GC (no manual control)
+Important Points
+System.gc() → request JVM to run GC (not guaranteed)
+GC runs in background
+Improves performance & memory usage
+
+
+
+Comparable Interface
+Comparable is used to sort objects based on a single property.
+ Package
+
+java.lang
+Method
+int compareTo(Object o);
+Logic
+return 0 → equal
+return positive → current object is greater
+return negative → current object is smaller
+Use Case
+Sort students by id
+Sort products by price
+
+
+
+ 3. Comparator Interface
+
+Comparator is used to sort objects based on multiple properties.
+
+Package
+
+java.util
+
+Method
+int compare(Object o1, Object o2);
+Key Difference from Comparable
+Comparable → inside class
+Comparator → external class
+Use Case
+Sort by name
+Sort by salary
+Multiple sorting logic
+
+
+4. Marker Interfaces in Java
+
+Marker Interface is an empty interface (no methods) used to provide special information to JVM.
+ How it works?+
+JVM checks whether a class implements marker interface → then applies special behavior.
+
+ Common Marker Interfaces
+Serializable → allows object to be converted into byte stream
+Cloneable → allows object cloning
+RandomAccess → fast access in collections
+SingleThreadModel (deprecated)
+
+
+
+
+
+
+
+
+
+
+
+Cloneable(I) code : 
+
+
+ref code : 
+
+
+class Student implements Cloneable {
+    int id;
+    String name;
+
+    Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) throws CloneNotSupportedException {
+
+        Student s1 = new Student(101, "Shubham");
+
+        Student s2 = (Student) s1.clone();
+
+        System.out.println("Original Object:");
+        System.out.println(s1.id + " " + s1.name);
+
+        System.out.println("Cloned Object:");
+        System.out.println(s2.id + " " + s2.name);
+    }
+}
