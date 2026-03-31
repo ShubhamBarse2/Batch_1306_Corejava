@@ -1,0 +1,47 @@
+Real Time Task : 
+
+Assume Single Table:
+
+employee(emp_id, emp_name, salary, department, hire_date, location)
+ Questions
+
+1.
+Find employees working in the HR department and display their salaries.
+2.
+Find employees whose salary is greater than the average salary of the company.
+3.
+Find employees who are getting the minimum salary in the Testing department.
+4.
+Find the total salary expenditure of the company.
+5.
+Find the average salary of employees in the Development department.
+6.
+Find the total salary of employees in HR and Support departments.
+7.
+Find employees whose salary is greater than the average salary of the Development department.
+8.
+Find the total salary expenditure in Pune location.
+9.
+Find employees who were hired in 2023.
+10.
+Find the count of employees in Mumbai location.
+11.
+Find employees whose salary is equal to the maximum salary of the company.
+12.
+Find departments where the average salary is greater than 60,000.
+13.
+Find employees whose salary is less than the average salary of the company.
+14.
+Find the second highest salary in the company.
+15.
+Find the department having the highest total salary.
+16.
+Find employees whose salary is greater than the average salary of their department.
+17.
+Find departments where more than 3 employees are working.
+18.
+Find employees hired in the same year as the highest paid employee.
+19.
+Find employees whose salary is less than the maximum salary of their department.
+20.
+Find the location where total salary is highest.
