@@ -1,0 +1,146 @@
+
+Task : 
+
+Order -> orderId , orderName, date , status
+
+Product -> productId , productName , price , quantity , manfdate , type 
+
+Customer -> CustomerId, CusName ,  email, mobNo , address , country , state , paymentMode , status , orderId , ProductId
+
+
+Performed Joins Operation : 
+
+
+ref queries : 
+
+
+CREATE TABLE Orders (
+    orderId INT PRIMARY KEY,
+    orderName VARCHAR(50),
+    date DATE,
+    status VARCHAR(20)
+);
+
+CREATE TABLE Product (
+    productId INT PRIMARY KEY,
+    productName VARCHAR(50),
+    price DECIMAL(10,2),
+    quantity INT,
+    manfdate DATE,
+    type VARCHAR(30)
+);
+
+CREATE TABLE Customer (
+    customerId INT PRIMARY KEY,
+    cusName VARCHAR(50),
+    email VARCHAR(50),
+    mobNo VARCHAR(15),
+    address VARCHAR(100),
+    country VARCHAR(30),
+    state VARCHAR(30),
+    paymentMode VARCHAR(20),
+    status VARCHAR(20),
+    orderId INT,
+    productId INT,
+    FOREIGN KEY (orderId) REFERENCES Orders(orderId),
+    FOREIGN KEY (productId) REFERENCES Product(productId)
+);
+
+
+
+
+
+INSERT INTO Orders VALUES
+(1, 'Laptop Order', '2026-04-01', 'Delivered'),
+(2, 'Mobile Order', '2026-04-02', 'Pending'),
+(3, 'TV Order', '2026-04-03', 'Cancelled');
+
+INSERT INTO Product VALUES
+(101, 'Laptop', 60000, 10, '2025-12-01', 'Electronics'),
+(102, 'Mobile', 20000, 20, '2025-11-01', 'Electronics'),
+(103, 'TV', 40000, 5, '2025-10-01', 'Electronics');
+
+INSERT INTO Customer VALUES
+(1, 'Shubham', 'shubh@gmail.com', '9876543210', 'Pune', 'India', 'MH', 'UPI', 'Active', 1, 101),
+(2, 'Rahul', 'rahul@gmail.com', '9876543211', 'Mumbai', 'India', 'MH', 'Card', 'Active', 2, 102),
+(3, 'Amit', 'amit@gmail.com', '9876543212', 'Delhi', 'India', 'DL', 'Cash', 'Inactive', NULL, NULL);
+
+
+
+
+
+
+1. Inner join : 
+
+SELECT c.cusName, o.orderName, p.productName, p.price
+FROM Customer c
+INNER JOIN Orders o ON c.orderId = o.orderId
+INNER JOIN Product p ON c.productId = p.productId;
+
+
+
+
+2. LEFT JOIN
+ All customers + matching orders/products
+
+SELECT c.cusName, o.orderName, p.productName
+FROM Customer c
+LEFT JOIN Orders o ON c.orderId = o.orderId
+LEFT JOIN Product p ON c.productId = p.productId;
+
+
+
+
+3. RIGHT JOIN
+All orders + matching customers
+
+SELECT c.cusName, o.orderName
+FROM Customer c
+RIGHT JOIN Orders o ON c.orderId = o.orderId;
+
+
+
+4. FULL JOIN 
+ All records from both sides
+
+SELECT c.cusName, o.orderName
+FROM Customer c
+LEFT JOIN Orders o ON c.orderId = o.orderId
+UNION
+SELECT c.cusName, o.orderName
+FROM Customer c
+RIGHT JOIN Orders o ON c.orderId = o.orderId;
+
+
+
+5. JOIN with WHERE Condition -> 
+
+SELECT c.cusName, p.productName, p.price
+FROM Customer c
+INNER JOIN Product p ON c.productId = p.productId
+WHERE p.price > 30000;
+
+
+6. JOIN with GROUP BY -> 
+
+SELECT p.type, COUNT(*) AS total_products
+FROM Product p
+INNER JOIN Customer c ON p.productId = c.productId
+GROUP BY p.type;
+
+
+7. JOIN with ORDER BY -> 
+
+SELECT c.cusName, p.productName, p.price
+FROM Customer c
+INNER JOIN Product p ON c.productId = p.productId
+ORDER BY p.price DESC;
+
+
+
+
+
+
+
+
+
